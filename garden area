@@ -1,0 +1,21 @@
+#optimization of garden bed area
+# garden bed will need to be rectangle
+
+from math import ceil, floor 
+  
+# Function to find max area 
+def maxArea(perimeter): 
+    #perim = float(perimeter)
+    length = float(ceil(perimeter / 4)) 
+    width = float(floor(perimeter / 4)) 
+  
+    # return area 
+    return length * width 
+  
+# Driver code 
+if __name__ == '__main__': 
+    n = float(input("Enter the perimeter of your garden bed: "))
+    print("Maximum Area =", maxArea(n)) 
+    print("Use a length of", length, "and a width of", width, "to achieve this area.")
+    
+
