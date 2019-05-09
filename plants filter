@@ -1,0 +1,51 @@
+# choosing plants based on sun
+# we will be using ghi (W/m^2) to determine sunshine
+#does not work, could not access the dataframe and save information
+
+garden_type= input(print("Please enter the type of garden you want in lowercase. Enter one of the four options: fruits, vegetables, flowers, or herbs. "))
+soil_type = input(print("Please enter the type of soil in your garden. Please use lowercase letters. "))
+
+if garden_type == df3.loc["flowers",:]:
+  if soil_type == df3.loc[:,"any"]:
+    if info[13,9]>= 6.5:
+      print(df3[2,2])
+      
+      
+#extracting the information from the dataframe
+
+flower = []
+for c in df3:
+    try:
+      if df3[c].apply(lambda x: x.str.contains('Plumbago')).any():
+        flower.append(c)
+    except:
+      pass
+print(flower)
+
+
+herbs1 = []
+for c in df3:
+    try:
+      if df3[c].apply(lambda x: x.str.contains('Thyme')).any():
+        herbs1.append(c)
+    except:
+      pass
+print(herbs1)
+
+fruits1 = []
+for c in df3:
+    try:
+      if df3[c].apply(lambda x: x.str.contains('blueberry')).any():
+        fruits1.append(c)
+    except:
+      pass
+print(fruits1)
+
+vegetables1 = []
+for c in df3:
+    try:
+      if df3[c].apply(lambda x: x.str.contains('cucumber')).any():
+        vegetable1.append(c)
+    except:
+      pass
+print(vegetalbes1)
